@@ -1,0 +1,32 @@
+# Supabase Local Development Configuration
+# For production, configure via Supabase Dashboard
+
+[project]
+# Replace with your Supabase project ID
+ref = "your-project-ref"
+
+[api]
+enabled = true
+port = 54321
+max_rows = 1000
+
+[db]
+port = 54322
+major_version = 15
+
+[studio]
+enabled = true
+port = 54323
+
+[auth]
+enabled = true
+site_url = "http://localhost:3000"
+additional_redirect_urls = ["http://localhost:3000"]
+jwt_expiry = 3600
+
+[storage]
+enabled = true
+file_size_limit = 104857600 # 100MB
+
+[edge_functions]
+enabled = true
